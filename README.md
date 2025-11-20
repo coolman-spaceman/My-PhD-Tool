@@ -1,0 +1,3 @@
+To Do: 
+1. Edit paper details or delete papers from the .db database
+2. ...
