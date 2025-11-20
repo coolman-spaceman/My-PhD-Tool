@@ -1,0 +1,109 @@
+/* Dark Theme CSS */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #1a1a1a; 
+    color: #e0e0e0; 
+    overflow: hidden; 
+}
+
+header { 
+    padding: 15px 20px; 
+    background: #252525; 
+    border-bottom: 1px solid #333;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+h2 { margin: 0; font-weight: 400; color: #ffffff; font-size: 1.2rem; white-space: nowrap;}
+
+/* Search Container */
+.search-container {
+    flex-grow: 1;
+    max-width: 400px;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus { border-color: #4facfe; }
+
+/* Generic Button Styling */
+.btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+/* Specific Button Colors */
+.add-btn { background: #4facfe; color: white; }
+.add-btn:hover { background: #00f2fe; }
+
+.reset-btn { 
+    background: #444; 
+    color: #ddd; 
+}
+.reset-btn:hover { background: #666; color: white; }
+
+#mynetwork {
+    width: 100%;
+    height: 92vh; 
+    background-color: #1a1a1a; 
+}
+
+/* Legend Styling */
+.legend-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(37, 37, 37, 0.9); /* Semi-transparent dark background */
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    z-index: 10; /* Ensures it sits on top of the canvas */
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.legend-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.legend-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}

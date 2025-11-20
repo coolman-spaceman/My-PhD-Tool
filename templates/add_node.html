@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Node</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, button { padding: 10px; font-size: 16px; }
+        button { background: #28a745; color: white; border: none; cursor: pointer; }
+        .paper-list { background: #f9f9f9; padding: 10px; border: 1px solid #ddd; height: 150px; overflow-y: scroll;}
+    </style>
+</head>
+<body>
+    <h2>Add New Paper Node</h2>
+    
+    <form action="/add" method="POST">
+        <label>Paper Name:</label>
+        <input type="text" name="name" required placeholder="e.g. Attention is All You Need">
+
+        <label>Group (Topic):</label>
+        <input type="text" name="group" required placeholder="e.g. NLP, Vision, etc.">
+
+        <label>Number of Citations (Determines Size):</label>
+        <input type="number" name="citations" value="0" required>
+
+        <label>Author:</label>
+        <input type="text" name="author" required>
+
+        <label>Link to other Papers (Enter IDs comma separated):</label>
+        <input type="text" name="links" placeholder="e.g. 1, 4">
+        
+        <div class="paper-list">
+            <strong>Available Papers (ID: Name)</strong><br>
+            {% for paper in papers %}
+                <small>ID {{ paper.id }}: {{ paper.name }} ({{ paper.group_name }})</small><br>
+            {% endfor %}
+        </div>
+
+        <button type="submit">Add Node</button>
+    </form>
+    <br>
+    <a href="/">Back to Graph</a>
+</body>
+</html>

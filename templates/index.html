@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Graph</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h2>My PhD Tool</h2>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" list="paper-list" placeholder="Search for a paper...">
+            <datalist id="paper-list">
+                </datalist>
+            <button id="reset-btn" class="btn reset-btn">Reset View</button>
+        </div>
+
+        <a href="/add" class="btn add-btn">+ Add Paper</a>
+    </header>
+    
+    <div id="legend" class="legend-container"></div>
+
+    <div id="mynetwork"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
